@@ -1,0 +1,11 @@
+[book]
+authors = ["Thomas Ung"]
+description = "The book covers the usage of all the modules for RoboBreizh Pepper robot"
+language = "en"
+multilingual = true
+src = "src"
+
+[build]
+build-dir = "book"                # the directory where the output is placed
+create-missing = true             # whether or not to create missing pages
+use-default-preprocessors = true  # use the default preprocessors
