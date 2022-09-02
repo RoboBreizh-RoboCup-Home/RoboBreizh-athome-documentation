@@ -9,3 +9,17 @@ src = "src"
 build-dir = "book"                # the directory where the output is placed
 create-missing = true             # whether or not to create missing pages
 use-default-preprocessors = true  # use the default preprocessors
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "rust"
+curly-quotes = true
+mathjax-support = false
+copy-fonts = true
+no-section-label = false
+git-repository-url = "https://github.com/RoboBreizh-RoboCup-Home/RoboBreizh-athome-documentation"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/RoboBreizh-RoboCup-Home/RoboBreizh-athome-documentation/edit/main/{path}"
+site-url = "robobreizh-documentation"
+cname = "robobreizh-documentation.rs"
+input-404 = "not-found.md"
