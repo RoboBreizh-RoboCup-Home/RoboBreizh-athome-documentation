@@ -7,7 +7,7 @@ As we use the ROS 1 Framework, knowing Python 3 and c++ are a pre-requisite.
 
 
 ## Architecture
-![Alt text](architecture_robobreizh.svg)
+![Alt text](pictures/architecture_robobreizh.svg)
 <!-- ```
 ├── src
 │   ├── CMakeLists.txt 

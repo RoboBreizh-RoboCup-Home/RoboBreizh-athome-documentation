@@ -11,7 +11,9 @@
 
 
 # User Guide
+- [Installation](usage/installation.md)
 - [How to run the project](usage/how-to-run.md)
+- [Services](usage/services.md)
 
 -----------
 
