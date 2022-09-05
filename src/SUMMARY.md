@@ -1,6 +1,7 @@
 # Summary
 [Introduction](introduction.md)
 # Modules
+- [Gentoo Prefix](modules/gentoo.md)
 - [Perception](modules/perception.md)
 - [Navigation](modules/navigation.md)
 - [Manipulation](modules/manipulation.md)

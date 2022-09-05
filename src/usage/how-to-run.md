@@ -12,10 +12,16 @@ Because ros needs to connect to the API first start nao driver in a terminal:
 After, you can start in a new terminal any ros node to connect.
 
 If you want to start a task you need to run the manager which is responsible for triggering petri plans, itself triggering ros calls to different services.
+Because we have different settings for the tasks we set a variable that tells us what to trigger.
+Following are the possible task to execute
+  - find_my_mates
+  - receptionist
+  - restaurant
+  - gpsr
+  - store_groceries
 
-Example start gpsr task:
 ```
-roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true
+roslaunch manager_pepper robobreizh_manager.launch [taskname]:=true door:=true|false
 ```
 
 ## Commands to run on your computer
