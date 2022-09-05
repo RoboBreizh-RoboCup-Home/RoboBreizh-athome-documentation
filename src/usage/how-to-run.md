@@ -13,6 +13,11 @@ After, you can start in a new terminal any ros node to connect.
 
 If you want to start a task you need to run the manager which is responsible for triggering petri plans, itself triggering ros calls to different services.
 
+Example start gpsr task:
+```
+roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true
+```
+
 ## Commands to run on your computer
 
 Before starting a ros node on your computer you need to tell your terminal where to find the roscore which is on the robot because you started the driver beforehand.
