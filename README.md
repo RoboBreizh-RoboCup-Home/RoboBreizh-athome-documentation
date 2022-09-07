@@ -1,4 +1,7 @@
 # RoboBreizh@Home documentation
+## Summary
+Summary is available [here](https://github.com/RoboBreizh-RoboCup-Home/RoboBreizh-athome-documentation/blob/main/src/SUMMARY.md)
+
 ## Usage
 You can either go through mardown files in the src folder
 Or use the web version by following the instructions below 
@@ -13,3 +16,4 @@ mdbook serve --open
 ```
 
 If you want an offline version, you can download a pdf by clicking on the printer icon at the top right corner
+
