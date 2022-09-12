@@ -58,7 +58,7 @@ roslaunch perception_pepper perception.launch finals:=true
 
 **Terminal 3: start rviz**
 ```
-export ROS_IP=192.168.50.44 // IP of the robot
-export ROS_MASTER_URI=http://192.168.50.44:11311 // IP of the robot
+export ROS_IP=192.168.50.44 # IP of the robot
+export ROS_MASTER_URI=http://192.168.50.44:11311 # IP of the robot
 rviz rviz
 ```
