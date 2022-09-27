@@ -43,4 +43,8 @@ Similarly, a service applies the pose detector to detect a hand waving informati
 
 ## RViz Visualization
 Based on the pose infomation collected, each object detected (inclusing persons) will be represented as a marker in RViz.
-All person detected will be represented as a red cylinder, while the non-human objects are represented as a green shpere. All the markers are drawn in their true vertical and horizontal dimensions.
+All person detected will be represented as a red cylinder, while the non-human objects are represented as a green shpere. All the markers are drawn in their true vertical and horizontal dimension.
+
+![Screenshot from 2022-09-27 09-20-16](https://user-images.githubusercontent.com/76032182/192416489-8d368e0e-bd39-4faa-8c5b-b97a5c8bcbf4.png)
+s.
+
