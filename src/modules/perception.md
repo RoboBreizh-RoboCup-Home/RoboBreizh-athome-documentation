@@ -6,6 +6,7 @@
   - [Person detection](#person-detection)
   - [Age estimation](#age-estimation)
   - [Pose detection](#pose-detection)
+  - [RViz Visualization](#RViz-Visualization)
 
 ## Object detection
 This module provides a set of ROS services with parameters, including a distance filter to prevent detecting objects outside of the arena.
@@ -38,3 +39,8 @@ A CNN-based model (MoveNet Multipose) predicts human joint locations of multiple
 Similarly, a service applies the pose detector to detect a hand waving information from a customer in the restaurant task.
 
 ![multipose image](../assets/multipose.png)
+
+
+## RViz Visualization
+Based on the pose infomation collected, each object detected (inclusing persons) will be represented as a marker in RViz.
+All person detected will be represented as a red cylinder, while the non-human objects are represented as a green shpere. All the markers are drawn in their true vertical and horizontal dimensions.
