@@ -4,6 +4,8 @@
   - [Commands to launch on the robot](#commands-to-launch-on-the-robot)
   - [Commands to run on your computer](#commands-to-run-on-your-computer)
   - [Example on how to modify and run a .launch file](#example-on-how-to-modify-and-run-a-launch-file)
+- [How to run dialog module](#how-to-run-dialog-and-understand-the-workarounds)
+  - [How to run it](#how-to-run-it)
 
 ## Commands to launch on the robot
 Because ros needs to connect to the API first start nao driver in a terminal:
@@ -61,4 +63,27 @@ roslaunch perception_pepper perception.launch finals:=true
 export ROS_IP=192.168.50.44 # IP of the robot
 export ROS_MASTER_URI=http://192.168.50.44:11311 # IP of the robot
 rviz rviz
+```
+
+# How to run dialog and understand the workarounds
+
+The dialog module uses tools of the native API NAOqi to determine the "Energy level" which is the intensity delivered by the microphones and represent the voice volume.
+Using the sound level we are able to detect whenever someone speaks and record a sound buffer and write it in a .wav file.
+
+One issue we have so far with this process is that writting it in a wav file takes too many seconds.
+
+The process described above runs in a thread that we can not pause. The workaround we found in order to put the thread on hold when we don't need it is writting a boolean value into a database to tell weither or not we want to run the listening.
+
+## How to run it
+
+In 3 different terminal :
+ - 1 - Run the driver
+ - 2 - Start the launch file within the dialog_pepper folder
+ - 3 - Open the manager database and run a SQL query to change the boolean value and start listening
+```
+sqlite3 ~/robobreizh_pepper_ws/src/manager_pepper/manager_db/roboBreizhDb.db 
+
+# Run the following sql query after entering the CLI interface of the database
+update dialog set run = 1 where id = 1;
+
 ```
