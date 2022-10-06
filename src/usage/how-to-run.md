@@ -32,8 +32,10 @@ roslaunch manager_pepper robobreizh_manager.launch [taskname]:=true door:=true|f
 Before starting a ros node on your computer you need to tell your terminal where to find the roscore which is on the robot because you started the driver beforehand.
 
 ```
-export ROS_IP=192.168.50.44 # IP of the robot
+export ROS_IP=$(ip a | sed -En 's//127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p | grep 192) # IP of YOUR COMPUTER
 export ROS_MASTER_URI=http://192.168.50.44:11311 # IP of the robot
+
+# Feel free to add them to your .bashrc or .zshrc
 ```
 
 In order to vizualize, the map and output from different topics. You can start Rviz a native vizualization tool provided by the ROS framework.
