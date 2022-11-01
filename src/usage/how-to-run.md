@@ -89,3 +89,11 @@ sqlite3 ~/robobreizh_pepper_ws/src/manager_pepper/manager_db/roboBreizhDb.db
 update dialog set run = 1 where id = 1;
 
 ```
+
+If you want to run a process in the background and close the ssh connection
+```
+ctrl+z
+bg
+disown -h
+exit
+```
