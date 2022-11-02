@@ -93,7 +93,7 @@ update dialog set run = 1 where id = 1;
 If you want to run a process in the background and close the ssh connection
 ```
 ctrl+z
-bg
-disown -h
+bg # Resumes jobs that have been suspended (e.g. using Ctrl + Z), and keeps them running in the background.More
+disown -h # Allow sub-processes to live beyond the shell that they are attached to
 exit
 ```
