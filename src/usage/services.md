@@ -2,6 +2,7 @@
 
 - [Services](#services)
   - [Perception](#perception)
+  - [Dialog](#dialog)
   - [Navigation](#navigation)
 
 ## Perception
@@ -16,5 +17,11 @@
 | Wave hand | /robobreizh/perception_pepper/wave_hand_detection "distance_max: 5.0"|
 | posture detection |/robobreizh/perception_pepper/person_features_detection_posture "{entries_list:{ obj:[data: ''],  distanceMaximum: 5.0}}"|
 | shoes and drink | /robobreizh/perception_pepper/shoes_and_drink_detection_service "{entries_list: [data: 'SHOES_DRINK_INFORMATION']}"|
+
+## Dialog
+| Function    | Service |
+| ----------- | ----------- |
+| Find if the name is known | /robobreizh/dialog_pepper/transcript_contains_srv "{transcript:'My name is Angel',topic_label:'Angel'}"|
+| Find the intent of the transcript | /robobreizh/dialog_pepper/transcript_intent "{transcript:''}"|
 
 ## Navigation
