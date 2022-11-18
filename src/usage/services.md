@@ -21,7 +21,7 @@
 ## Dialog
 | Function    | Service |
 | ----------- | ----------- |
-| Find if the name is known | /robobreizh/dialog_pepper/transcript_contains_srv "{transcript:'My name is Angel',topic_label:'Angel'}"|
+| Find if the name is known | /robobreizh/dialog_pepper/transcript_contains_srv "{transcript:'My name is Angel',word_found:'Name'}"|
 | Find the intent of the transcript | /robobreizh/dialog_pepper/transcript_intent "{transcript:''}"|
 
 ## Navigation
