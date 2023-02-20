@@ -1,4 +1,5 @@
 ## Contents
+
 - [Installation](#installation)
   - [Install every package](#install-every-package)
   - [Maintain robobreizh_pepper_ws](#maintain-robobreizh_pepper_ws)
@@ -6,10 +7,11 @@
 # Installation
 
 The file architecture is set up to be a ros workspace.
+
 ```
 ├── README.md
 ├── src
-│   ├── CMakeLists.txt 
+│   ├── CMakeLists.txt
 │   ├── dialog_pepper
 │   ├── manager_pepper
 │   ├── manipulation_pepper
@@ -21,10 +23,12 @@ The file architecture is set up to be a ros workspace.
 ```
 
 ## Install every package
+
 If you want to install all the modules your can download the robobreizh_pepper_ws
 
 This repository is built upon differents submodules. The current architecture is:
 All submodules can be cloned independantly:
+
 - robobreizh_navigation: see the [original repository](https://github.com/RoboBreizh-RoboCup-Home/navigation_pepper).
 - robobreizh_dialog: see the [original repository](https://github.com/RoboBreizh-RoboCup-Home/dialog_pepper).
 - robobreizh_perception: see the [original repository](https://github.com/RoboBreizh-RoboCup-Home/perception_pepper).
@@ -33,6 +37,7 @@ All submodules can be cloned independantly:
 - pepper_naoqi_ros : see the [original repository](https://github.com/Maelic/pepper_naoqi_ros.git)
 
 1. clone the repository:
+
 ```buildoutcfg
 git clone --recursive https://github.com/RoboBreizh-RoboCup-Home/robobreizh_pepper_ws.git
 git submodule update --init --recursive
@@ -60,14 +65,16 @@ catkin_make && source devel/setup.zsh
 ## Maintain robobreizh_pepper_ws
 
 If you want to pull only one submodule you can by using:
+
 ```buildoutcfg
 git submodule update <specific path to submodule>
 ```
 
 If you want to update the whole main repository
+
 ```bash
 chmod +x updateGitSubmodules.sh && ./updateGitSubmodules.sh
-or 
+or
 git submodule foreach git pull
 ---
 git add .

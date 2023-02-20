@@ -19,6 +19,7 @@
 | shoes and drink | /robobreizh/perception_pepper/shoes_and_drink_detection_service "{entries_list: [data: 'SHOES_DRINK_INFORMATION']}"|
 
 ## Dialog
+
 | Function    | Service |
 | ----------- | ----------- |
 | Find if the name is known | /robobreizh/dialog_pepper/transcript_contains_srv "{transcript:'My name is Angel',word_found:'Name'}"|
