@@ -21,4 +21,16 @@
 
 ---
 
+# Preparations
+
+- [Preparation day](preparation/preparation.md)
+- [Inspection](preparation/inspection.md)
+- [Receptionist](preparation/receptionist.md)
+- [Carry my luggage](preparation/carry-my-luggage.md)
+- [GPSR](preparation/gpsr.md)
+- [Storing groceries](preparation/storing-groceries.md)
+- [Serve breakfast](preparation/serve-breakfast.md)
+
+---
+
 [Contributors](misc/contributors.md)
