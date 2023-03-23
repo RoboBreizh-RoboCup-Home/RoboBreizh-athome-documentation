@@ -17,7 +17,7 @@
 | Wave hand | /robobreizh/perception_pepper/wave_hand_detection "distance_max: 5.0"|
 | posture detection |/robobreizh/perception_pepper/person_features_detection_posture "{entries_list:{ obj:[data: ''],  distanceMaximum: 5.0}}"|
 | shoes and drink | /robobreizh/perception_pepper/shoes_and_drink_detection_service "{entries_list: [data: 'SHOES_DRINK_INFORMATION']}"|
-| pointing at | /robobreizh/perception_pepper/pointing_hand_service  "distance_max: 5.0"|
+| pointing at | /robobreizh/perception_pepper/pointing_hand_detection  "distance_max: 5.0"|
 
 ## Dialog
 
