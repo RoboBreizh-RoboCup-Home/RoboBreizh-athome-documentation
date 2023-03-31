@@ -47,29 +47,63 @@ To start fresh run `rviz rviz`.
 
 If you want to start from an existing file `rosrun rviz rviz -d [path/of/the/file]`
 
-## Example on how to modify and run a .launch file
+## Example on how to modify and run a task 
 
 **Terminal 1: start driver**
 
 ```
-ssh nao@pepper2.local
+ssh nao@[robot_ip]
 nao_driver
 ```
 
-**Terminal 2: copy and run launch file**
+**Terminal 2: start rviz and set initial position**
 
 ```
-scp perception.launc nao@pepper2.local:~/robobreizh_pepper_ws/src/perception_pepper/launch
-ssh nao@pepper2.local
-roslaunch perception_pepper perception.launch finals:=true
+export ROS_MASTER_URI=http://[pepper_ip]:11311
+rviz rviz -d `rospack find navigation_pep` /config/rviz_config/nav.rviz
 ```
-
-**Terminal 3: start rviz**
+**Terminal 2: start manager launch file**
 
 ```
-export ROS_IP=192.168.50.44 # IP of the robot
-export ROS_MASTER_URI=http://192.168.50.44:11311 # IP of the robot
-rviz rviz
+ssh nao@[robot_ip]
+
+# run one of these
+# Inspection
+roslaunch manager_pepper robobreizh_manager.launch inspection:=true door:=true
+
+# Stage 1
+roslaunch manager_pepper robobreizh_manager.launch receptionist:=true door:=false 
+roslaunch manager_pepper robobreizh_manager.launch carry_my_luggage:=true door:=false
+roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true --once 
+roslaunch manager_pepper robobreizh_manager.launch storing_groceries:=true door:=false
+roslaunch manager_pepper robobreizh_manager.launch serve_breakfast:=true door:=true
+
+# Stage 2
+roslaunch manager_pepper robobreizh_manager.launch stickler_for_the_rules:=true door:=false
+roslaunch manager_pepper robobreizh_manager.launch restaurant:=true door:=false
+roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true
+roslaunch manager_pepper robobreizh_manager.launch clean_the_table:=true door:=true
+```
+
+**Terminal 4: publish the task plan**
+
+```
+ssh nao@[robot_ip]
+# Inspection
+rostopic pub /pnp/planToExec std_msgs/String "data: 'inspection'" --once
+
+# Stage 1
+rostopic pub /pnp/planToExec std_msgs/String "data: 'Receptionist'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'CarryMyLuggage'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'GPSR'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'StoringGroceries'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'ServeBreakfast'" --once
+
+# Stage 2
+rostopic pub /pnp/planToExec std_msgs/String "data: 'Stickler'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'Restaurant'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'GPSR'" --once
+rostopic pub /pnp/planToExec std_msgs/String "data: 'CleanTheTable'" --once
 ```
 
 # How to run dialog and understand the workarounds
