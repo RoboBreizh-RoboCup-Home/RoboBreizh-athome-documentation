@@ -62,7 +62,7 @@ nao_driver
 export ROS_MASTER_URI=http://[pepper_ip]:11311
 rviz rviz -d `rospack find navigation_pep` /config/rviz_config/nav.rviz
 ```
-**Terminal 2: start manager launch file**
+**Terminal 3: start manager launch file**
 
 ```
 ssh nao@[robot_ip]
