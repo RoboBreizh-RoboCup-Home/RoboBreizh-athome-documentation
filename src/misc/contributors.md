@@ -17,6 +17,8 @@ shout-out to them!
 - Duc Nhan Do ([DoDucNhan](https://github.com/DoDucNhan))
 - Jason ([JasonakaLuci](https://github.com/JasonakaLuci))
 - YiMing ([Yiming-github](https://github.com/Yiming-github))
+- Rebecca Li ([Rebeccalaylay](https://github.com/Rebeccalaylay))
+- Samuel Kwok ([khksamuel](https://github.com/khksamuel))
 - Thomas Ung ([tomkimsour](https://github.com/tomkimsour))
 
 If you feel you're missing from this list, feel free to add yourself in a PR.
