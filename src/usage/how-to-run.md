@@ -74,7 +74,7 @@ roslaunch manager_pepper robobreizh_manager.launch inspection:=true door:=true
 # Stage 1
 roslaunch manager_pepper robobreizh_manager.launch receptionist:=true door:=false 
 roslaunch manager_pepper robobreizh_manager.launch carry_my_luggage:=true door:=false
-roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true --once 
+roslaunch manager_pepper robobreizh_manager.launch gpsr:=true door:=true
 roslaunch manager_pepper robobreizh_manager.launch storing_groceries:=true door:=false
 roslaunch manager_pepper robobreizh_manager.launch serve_breakfast:=true door:=true
 
