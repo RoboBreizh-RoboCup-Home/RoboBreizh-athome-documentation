@@ -54,6 +54,7 @@ If you want to start from an existing file `rosrun rviz rviz -d [path/of/the/fil
 ```
 ssh nao@[robot_ip]
 nao_driver
+roslaunch naoqi_driver naoqi_driver.launch network_interface:=eth0
 ```
 
 **Terminal 2: start rviz and set initial position**
